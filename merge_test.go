@@ -123,7 +123,6 @@ func TestReadDirIsSorted(t *testing.T) {
 		"dir/1": &fstest.MapFile{Mode: fs.ModeDir},
 	}
 
-
 	mfs := mergefs.Merge(fs1, fs2, fs3)
 	entries, err := fs.ReadDir(mfs, "dir")
 	require.NoError(t, err)
